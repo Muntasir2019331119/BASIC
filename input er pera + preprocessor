@@ -87,6 +87,21 @@ int main(void) {
 
 	 //getchar()
      //takes input of a char..
+     
+     getchar() na dile proti test case er porer jei enter seita accept korey fele
+
+Like
+
+2(endl)
+Abra ka dabra
+Gili gili poo
+
+Eikhane 
+
+
+2 AND Abra ka dabra (and Gili gili poo) er majhe ekta “enter” ba newline/endl asey. 
+If u don’t use getchar() ei newline ta  string hishabe input niye ney :3 
+Which results in wa
 
        
 
