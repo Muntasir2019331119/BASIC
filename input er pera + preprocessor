@@ -1,0 +1,96 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+int main()
+{  
+      //preprocessor:
+	#define eta= oita type;
+	#define size 100
+	//DATE:
+	 puts("The program was successfully compiled on " __DATE__);
+    //TIME:
+	puts("I was compiled at " __TIME__);
+  
+   //The ## operator:
+	#define GLUE(x,y) x##y
+	//-> GLUE(Hala,MADRID) -->HALAMADIRD
+//code we vitorei..
+	#if expression0
+text0
+#elif expression1
+text1
+#elif expression2
+text2
+  :
+  :
+#elif expressionn
+textn
+#else
+texte
+#endif
+
+//example:
+#include <stdio.h>
+#define	SIZE 100
+
+int main(void) {
+	int	array[SIZE];
+
+#if SIZE < 1000
+	puts("The array is not so large");
+#else
+	puts("The array is "
+#if SIZE > 10000
+	"very "
+#endif
+	"large ");
+#endif
+	return 0;
+}
+
+--------------------------------------#############################---------------------------------------------
+
+     //input method:
+
+
+	string str;
+	//getting input till end of dile
+	
+	while(scanf("%s",str)!=EOF);
+	//more classy way
+		while(scanf("%s",str)!=-1)//can use cin if we want..
+   
+   //taking input of a paragraph
+			while(cin>>str){//blah}
+	
+	//gets=The gets() function in C++ reads characters from stdin and stores them until a newline character is found or end of file occurs.But using gets()is risky..because of buffer overflow..
+	
+				//it reads the whitespace of the string..
+
+				//example:
+
+				gets(str);
+
+			//getline=takes input untill newline(\n)
+	       		getline(cin,str);
+
+
+	// %[^'\n']:
+          //it takes input untill newline or EOF..
+          //it reads whitespace of the string..
+		scanf("%[^'\n']",str);
+
+   //isalpha(x)->
+		//returns true if x is an alphabetic character
+	//isdigit(x)->
+	    //returns true if x is a digit..
+
+	 //getchar()
+     //takes input of a char..
+
+       
+
+
+
+
+}
