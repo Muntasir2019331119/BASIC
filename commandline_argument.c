@@ -1,3 +1,4 @@
+//credit:MAHIR LABIB DIHAN https://github.com/mahirlabibdihan
 #include <stdio.h>
  
 // Commandline Argument : Arguments passed to program  using commandline(Ex: CMD) during program execution . 
