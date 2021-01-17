@@ -21,6 +21,7 @@ unsigned int  a:1,b:2,c:3;
 int main()
 {
     printf("Size of date is %lu bytes\n", sizeof(struct Birthdate));//which is 8 bytes; but if we use normal representation it will take 12 bytes
+	//y=4 byte,d=5bit,m=4 bit..so sum=4byte+(5+4bit)=5 byte 1 bit..so it crossed 4 byte..in structure size is the multiple of highest size..it crossed 4..so size is 8..if it crossed 8..then the size will be 12..
     struct Birthdate Nahid = { 31, 12, 2000};
     printf("Birth Date is %d/%d/%d", Nahid.d, Nahid.m, Nahid.y);
 
