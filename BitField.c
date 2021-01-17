@@ -27,9 +27,9 @@ int main()
 //But it has some problem....
 //The output comes out to be negative if the input is 31/12/2000 and we use only int instead of unsigned int(output is = -1/-4/2000).
  //What happened behind is that the value 31 was stored in 5 bit signed integer which is equal to 11111.
- //The MSB is a 1, so it’s a negative number and you need to calculate the 2’s complement of the binary number to get its actual value which is what is done internally.
-  //By calculating 2’s complement you will arrive at the value 00001 which is equivalent to decimal number 1 and since it was a negative number you get a -1.
- //A similar thing happens to 12 in which case you get 4-bit representation as 1100 which on calculating 2’s complement you get the value of -4.
+ //The MSB is a 1, so itâ€™s a negative number and you need to calculate the 2â€™s complement of the binary number to get its actual value which is what is done internally.
+  //By calculating 2â€™s complement you will arrive at the value 00001 which is equivalent to decimal number 1 and since it was a negative number you get a -1.
+ //A similar thing happens to 12 in which case you get 4-bit representation as 1100 which on calculating 2â€™s complement you get the value of -4.
 
 
 struct test x;
@@ -44,6 +44,7 @@ int i;
 	for(i=0;i<8;i++)
 	{
 		x.c=x.b=x.a=i;//in bitfield (x.a=x.b=x.c=i)!=(x.c=x.b=x.a)
+		//assignment right theke left e hoy..tai i=5 jokhn x.a=1 x.a=x.b=x.c=1 hoye jay tokhn...
 		printf("%d %d %d\n",x.a,x.b,x.c);
 	}
 }
