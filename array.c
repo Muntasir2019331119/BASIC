@@ -67,8 +67,8 @@ printf("%d\n",*p);
 //-----------------passing array to a function----------------------------------
 
 	int arra[5]={1,2,3,4,5};
-	//int array[n];//then input
-	//passingArray(array,n);//n shoho pathatey hobey..jkono function a..
+	int array[n];//then input
+	passingArray(array,n);//n shoho pathatey hobey..jkono function a..
 	passingArray2(arra);
 	//if arra have no given size..we have to pass the size too..
 
