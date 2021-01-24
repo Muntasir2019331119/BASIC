@@ -13,7 +13,7 @@
 
 
 //%i takes integer value as integer value with decimal, hexadecimal or octal type.
-//To enter a value in hexadecimal format ñ value should be provided by preceding ì0xî and value in octal format ñ value should be provided by preceding ì0î.
+//To enter a value in hexadecimal format ‚Äì value should be provided by preceding ‚Äú0x‚Äù and value in octal format ‚Äì value should be provided by preceding ‚Äú0‚Äù.
 
 #include<stdio.h>
 int main()
@@ -32,6 +32,6 @@ int main()
     scanf("%i",&e);// 010 will treat as a octal number .Decimal Value = 8
     printf("%d\n",e);//8
     scanf("%d",&e);// 010 will treat as a decimal number .Decimal Value = 10
-    printf("%d",e);//10
+    printf("%d",e);//10 
 }
 
