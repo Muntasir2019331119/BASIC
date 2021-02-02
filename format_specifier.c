@@ -47,8 +47,8 @@ int main()
    float a=12.67,b=1345.89,c=1345.89e3;
    printf("In f=%f,%f\n",a,b);//12.670000.1345.890000
    printf("In e= %e,%e\n",a,b);//1.267000e+001,1.345890e+003
-   printf("%g\n",c);
-   printf("%G\n",c);
+   printf("%g\n",c);//1.34589e+006
+   printf("%G\n",c);//1.34589e+006
 
     char str[] = "MuntasirNahid";
     printf("%20s\n", str);//minimun 20 word print..kom holey leading space
