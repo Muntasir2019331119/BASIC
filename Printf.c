@@ -11,7 +11,8 @@ int main()
 // 3)(space)=If no sign is going to be written, a blank space is inserted before the value.
 
 // 4)#      =i)Used with o, x or X specifiers the value is preceded with 0, 0x or 0X respectively for values different than zero.
-//           ii)Used with e, E and f, it forces the written output to contain a decimal point even if no digits would follow. By default, if no digits follow, no decimal point is written.
+//           ii)Used with e, E and f, it forces the written output to contain a decimal point even if no digits would follow.
+//	       By default, if no digits follow, no decimal point is written.
 //           iii)Used with g or G the result is the same as with e or E but trailing zeros are not removed.
 
 // 5)0     =Left-pads the number with zeroes (0) instead of spaces, where padding is specified
@@ -46,13 +47,16 @@ int main()
 //             The value is not truncated even if the result is longer. A precision of 0 means that no character is written for the value 0.
 //           ii)For e, E and f specifiers − this is the number of digits to be printed after the decimal point.
 //
-//           iii)For g and G specifiers − This is the maximum number of significant digits to be printed.By default all characters are printed until the ending null character is encountered
-//           iv) For c type − it has no effect. When no precision is specified, the default is 1. If the period is specified without an explicit value for precision, 0 is assumed.
+//           iii)For g and G specifiers − This is the maximum number of significant digits to be printed.
+//	         By default all characters are printed until the ending null character is encountered
+//           iv) For c type − it has no effect. When no precision is specified, the default is 1. 
+//             	If the period is specified without an explicit value for precision, 0 is assumed.
 
 //-------------------------------length----------------------------------------
 
 //1)h     =The argument is interpreted as a short int or unsigned short int (only applies to integer specifiers: i, d, o, u, x and X).
-//2)l     =The argument is interpreted as a long int or unsigned long int for integer specifiers (i, d, o, u, x and X), and as a wide character or wide character string for specifiers c and s.
+//2)l     =The argument is interpreted as a long int or unsigned long int for integer specifiers (i, d, o, u, x and X),
+//	   and as a wide character or wide character string for specifiers c and s.
 //3)L     =The argument is interpreted as a long double (only applies to floating point specifiers: e, E, f, g and G).
 
 //-------------------------------------------------------------------------------------
