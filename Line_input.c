@@ -77,6 +77,11 @@ int main()
 	// Input : I am Mahir Labib Dihan
 	// Output : ->I am Mahir<-
 	//  		-> Labib Dihan<-
+	   // So what's the proper way to take a line as Input????
+	// Solution :
+	  scanf("\n%10[^\n]",Line1);      // Ignores whitespace characters at the beginning.
+	  scanf("%*[^\n]");		// Reads and Ignores characters left in stdin until '\n' . Thus clears the stdin . '\n' is still left in stdin .
+	  getchar();	// Clears '\n' from stdin .
 
 	
  
