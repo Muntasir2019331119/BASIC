@@ -87,6 +87,8 @@ int main()
 	printf(" %10.5f\n", 1111111.2);
 	printf(" %010.5f\n", b);
 	printf(" %-10.5f\n", b);
+	printf(" $%4.2f\n",b);
+	printf(" %7.2f%%\n",b);//it will print percent sign too
 
 	printf("\nFor octal\n");
 	printf(" %o\n", a);
