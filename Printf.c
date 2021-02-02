@@ -26,11 +26,11 @@ int main()
 //2) *      =The width is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted.(garbage value dibe)
 
 // ***explanation:
-//    printf er shuru tey amra " " diya je string lekhi shetakey boe format string ..normally width koto hobey oita 
+//    printf er shuru tey amra " " diya je string lekhi shetakey boe format string ..normally width koto hobey oita
 //    format string er vitore specify kore dei..like "%10d".
 //    the width is not specified in the format string...
 //    mane * dile format string er vitore width bola lagey na..
-   
+
 //    but as an additional integer value argument ..
 //  extra ekta width diye argument ta specify kortey hoy..
 
@@ -64,7 +64,7 @@ int main()
 
 
 
-	
+
 	int a = 155;
 	float b = 158.216755;
 
@@ -117,12 +117,12 @@ int main()
 // printf("%Takla");
 
 	printf("%-s\n", "Nahid");
- //sprintf()
+//sprintf()
 // If successful,
-// it returns the total number of 
-// characters written excluding 
-// null-character appended in the string, 
-// in case of failure a negative number 
+// it returns the total number of
+// characters written excluding
+// null-character appended in the string,
+// in case of failure a negative number
 // is returned .
 // sprintf stands for “String print”. Instead of printing on console, it store output on char Name which are specified in sprintf.(see below)
 
@@ -138,7 +138,13 @@ int main()
 
 	printf("%05d\n", -5);
 	printf("%5d\n", -5);
-
+	int j = 123;
+	float x = 12.0, y = -3.3;
+	printf(":%6d %7.0f %lO.1 e:\n\n", j, x, y);
+	printf (":%-6d %-7.0f %-lO.1e  \n\n", 1, x , y) ;
+	printf(":%+6d %+7.0f %+lO.le \n\n", 1, x, y);
+	printf(":%-+6d %-+7.0f %-+lO.le:\n\n", 1, x, y);//sign ta ki shetay bole dey..
+	printf(":%7.0f %#7.0f %7g %#7g:", x, x, y, y);
 
 
 
