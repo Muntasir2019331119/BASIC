@@ -117,7 +117,10 @@ int main()
 // scanf("%d a %f",&x,&l);//1 a 2.0
 // printf("%d %f",x,l);//1 2.000000 //a er jaygay onno kichu dile 1 garbage 2.000000 garbage..
 
-
+int a,b,c='k';
+	scanf("%c%*c%c",&a,&b,&c);//a b
+	printf("%c\n",b);//b
+	printf("%c%c%c",a,b,c);//abk
 
 
 
