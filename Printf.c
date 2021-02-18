@@ -123,6 +123,9 @@ int main()
 // printf("%Takla");
 
 	printf("%-s\n", "Nahid");
+	char s[]="Myname is Muntasir mamun Nahid";
+        printf("%-7.5s\n",s);//Mynam'space''space' 
+        printf("%7.5s\n",s);//' '' 'Mynam
 //sprintf()
 // If successful,
 // it returns the total number of
