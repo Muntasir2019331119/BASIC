@@ -36,8 +36,8 @@ putchar(c);//A
 gets(line);//muntasir mumun nahid
 puts(line);
 putchar(c);//u (11th char)
-
-//printf("%d\n",res);
+int res=puts(line);
+printf("%d\n",res);
 
 //-----------------------------------getch()-------------------------------------------------
 // getch() is a nonstandard function and is present in conio.h header file which is mostly used by MS-DOS compilers like Turbo C. It is not part of the C standard library or ISO C, nor is it defined by POSIX.
