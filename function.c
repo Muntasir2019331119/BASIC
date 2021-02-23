@@ -171,7 +171,6 @@ void Function(int a,int b) //Function definition = Function Declaration + Statem
 -----------------------------####################------------------------------------
 ----->Muntasir Mamun Nahid
 
-
 //passing structure to a function...
 
 //pass by value..
@@ -302,5 +301,65 @@ int main(int argc,char *argv[])//argc->argument counter..argv[]->argument values
 argv[0]->contains the name of the running programme.
 aragv[1]->contains the string passed to the programme as the first element
 aragv[n]->contains the string passed to the programme as the nth element
+
+
+
+//variadic function:
+
+// //the below function will give proper output..
+
+int f()//it means that we can pass as many parameter as we want..including zero number of argument..
+{
+	printf("congratulations!\n");
+}
+
+int main(void)
+{
+	f();
+	f(1);
+	f(1,2);
+	return 0;
+}
+output:
+congratulations!
+congratulations!
+congratulations!
+
+
+//three dot(ellipsis):
+
+int f(int a, ...)
+//it means that we can pass as many parameter as we want..excluding zero number of argument..
+//we must have to give three dot. 
+//but
+//int f(int a , ... ,int b)is not allowed
+//int f(...) is not allowed. 
+//int f(...,...)is not allowed
+{
+	printf("congratulations!\n");
+}
+
+int main(void)
+{
+	//f();
+	f(1);
+	f(1,2);
+	return 0;
+}
+// output:
+// congratulations!
+// congratulations!
+
+
+int sum(int a, ...)
+{
+
+}
+int main()
+{
+	sum(4,1,2,3);//4=number of elemnts;1,2,3=elemnts passed to the function..
+}
+
+//these type of function is known as variadic function..to know more visit gfg or  : 
 
 

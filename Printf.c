@@ -155,6 +155,10 @@ int main()
 	printf(":%-+6d %-+7.0f %-+lO.le:\n\n", 1, x, y);//sign ta ki shetay bole dey..
 	printf(":%7.0f %#7.0f %7g %#7g:", x, x, y, y);
 
+	
+
+	printf("%d",printf("%c %c %c ",'x','y','z'));//x y z 6 //right side theke ashe..%d ashar agey koyta char achey oita output %d tey..
+
 
 
 
