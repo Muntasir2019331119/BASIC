@@ -47,13 +47,13 @@ int sum(int n, ...)
 		/*
 		va_arg is a macro . // #define va_arg(ap, t)   (((ap) = (ap) + __va_argsiz(t)),   *((t*) (void*) ((ap) - __va_argsiz(t))))
 
-				va_arg() expects two arguments:
-		       1)the name of the list to get the value from (the list should be previously initialized by the va_start() invocation)
-		2)the type name of the value being fetched.
+		va_arg() expects two arguments:
+		        1)the name of the list to get the value from (the list should be previously initialized by the va_start() invocation)
+			2)the type name of the value being fetched.
 
-		   data type can't be short , unsigned short , char , float .
-		    char , short , unsigned short  is promoted to int .
-		    float is promoted to double .
+		 	** data type can't be short , unsigned short , char , float .
+		  	** char , short , unsigned short  is promoted to int .
+		        ** float is promoted to double .
 
 
 				the va_arg() does two things:
@@ -119,7 +119,7 @@ int va_max(int n, ...)
 }
 int main()
 {
-	int x = va_max(3, 1, 2, 3);//30
+	int x = va_max(3, 1, 2, 3);//3
 	printf("%d\n", x);
 	myprint();//hi
 	return 0;
