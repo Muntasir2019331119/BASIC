@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdarg.h>
 #define myprint(...) printf("hi!\n")
-
+//A function that accepts a variale number of argument is a variadic_function.
 //We typically use variadic function when we don’t know the total number of arguments that will be used for a function.
 // Basically one single function could potentially have n number of arguments.
 
