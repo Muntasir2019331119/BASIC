@@ -360,6 +360,6 @@ int main()
 	sum(4,1,2,3);//4=number of elemnts;1,2,3=elemnts passed to the function..
 }
 
-//these type of function is known as variadic function..to know more visit gfg or  : 
+//these type of function is known as variadic function..to know more visit gfg or  click [here]{https://github.com/MuntasirNahid/BASIC_in_C_Language/blob/main/variadic_function.c}
 
 
