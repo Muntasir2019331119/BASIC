@@ -28,6 +28,16 @@ We can define operators as symbols that help us to perform specific mathematical
 5)Assignment Operators: Assignment operators are used to assign value to a variable. The left side operand of the assignment operator is a variable and right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of variable on the left side otherwise the compiler will raise an error.
 Example: +=,-=,*=,/=,
 
+## Conditional operator:
+A conditional expression is written in the form:
+
+expression 7 ? expression 2 : expression 3
+
+When evaluating a conditional expression, expression I is evaluated first. If expression 7 is true
+(i.e., if its value is nonzero), then expression 2 is evaluated and this becomes the value of the conditional
+expression. However, if expression 7 is false (i.e., if its value is zero), then expression 3is evaluated
+and this becomes the value of the conditional expression.
+
 
 ##-------------------Precedence------------------------------------##
 Category			Operator							Associativity
