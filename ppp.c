@@ -1,20 +1,81 @@
+//1st one: s=d/t
+
 #include<stdio.h>
-#include<math.h>
-int main()
+#include<conio.h>
+main()
 {
-// 	int a,b,c='k';
-// 	scanf("%c%*c%c",&a,&b,&c);//a b
-// 	printf("%c\n",b);
-// 	printf("%c%c%c",a,b,c);
-// 
-int a=1,b,c,d=9;
-scanf("%2d%*3d%1d%4d",&a,&b,&c,&d);//12324322342
-printf("%d %d %d %d\n",a,b,c,d);//12 3 2234 9
+  float s,d,t;
+  printf("Enter d=");
+  scanf("%f",&d);
+  printf("Enter t=");
+  scanf("%f",&t);
+  s=d/t;
+  printf("\n\ns=%f",s);
+  getch();
+}
 
-char s[]="Myname is Muntasir mamun Nahid";
-printf("%-7.5s\n",s);//Mynam'space''space' 
-printf("%7.5s\n",s);//' '' 'Mynam
+//2nd one:a=(v-u)/t
 
-int x=sqrt(24.6);
-printf("%.2f\n",(float)x);
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+  float a,v,u,t;
+  printf("Enter v=");
+  scanf("%f",&v);
+  printf("Enter u=");
+  scanf("%f",&u);
+  printf("Enter t=");
+  scanf("%f",&t);
+  a=(v-u)/t;
+  printf("\n\na=%f",a);
+  getch();
+}
+
+//3rd one : F=m*a
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+  float F,m,a;
+  printf("Enter m=");
+  scanf("%f",&m);
+  printf("Enter a=");
+  scanf("%f",&a);
+  F=m*a;
+  printf("\n\nF=%f",F);
+  getch();
+}
+
+//4th one: w=m*g
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+  float w,m,g;
+  printf("Enter m=");
+  scanf("%f",&m);
+  printf("Enter g=");
+  scanf("%f",&g);
+  w=m*g;
+  printf("\n\nw=%f",w);
+  getch();
+}
+
+//5th one: p=m*v
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+  float p,m,v;
+  printf("Enter m=");
+  scanf("%f",&m);
+  printf("Enter v=");
+  scanf("%f",&v);
+  p=m*v;
+  printf("\n\np=%f",p);
+  getch();
 }
