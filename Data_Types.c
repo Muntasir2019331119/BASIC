@@ -47,6 +47,12 @@ However, the meaning of these data types will vary from one C compiler to anothe
 //There are two extra data type known as "void ","enum"..These will be discussed in another commit..
 
 
+Void:
+-----
+void is a special data type. But what makes it so special? void, as it literally means, is an empty data type. It means it has nothing or it holds no value.
+For example, when it is used as the return data type for a function it simply represents that the function returns no value. 
+Similarly, when its added to a function heading, it represents that the function takes no arguments.
+
 */
 int main()
 {
