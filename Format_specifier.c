@@ -5,7 +5,7 @@
 //Format specifiers have no meaning in a string unless the string is passed to variadic function .
 //Variadic Function searches for % in the string and on the basis of the characters after % it can understand what type of data it needs to work with .
 
-//printf(char *format, arg1, arg2, …)
+//printf(char *format, arg1, arg2, â€¦)
 /*This function prints the character on standard output and returns the number of character printed the format is a string starting with % and ends with conversion character (like c, i, f, d, etc.).
 Between both, there can be elements governing the printing format. Below is its description
 
