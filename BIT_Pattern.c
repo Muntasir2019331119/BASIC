@@ -126,7 +126,7 @@ int main()
 
     //Left Shift operator:
     /*<< (left shift) Takes two numbers, left shifts the bits of the first operand, the second operand decides the number of places to shift.
-    Or in other words left shifting an integer “x” with an integer “y” (x<<y) is equivalent to "multiplying" x with 2^y (2 raise to power y).
+    Or in other words left shifting an integer â€œxâ€ with an integer â€œyâ€ (x<<y) is equivalent to "multiplying" x with 2^y (2 raise to power y).
 
 
     //  x<<n    // n<width of data type(for int 32)
