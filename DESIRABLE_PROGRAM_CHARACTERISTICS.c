@@ -5,7 +5,8 @@ all other program enhancements will be meaningless if the calculations are not c
  out correctly. Thus, the integrity of the calculations is an absolute necessity in any
   computer program.
 
-2. Clarity refers to the overall readability of the program, with particular emphasis on its underlying logic.If a program is clearly written, it should be possible for another 
+2. Clarity refers to the overall readability of the program, with particular emphasis on its underlying logic.If a program is clearly written,
+it should be possible for another 
 programmer to follow the program logic without undue effort. It should also be possible 
 for the original author to follow his or her own program after being away from the 
 program for an extended period of time. One of the objectives in the design of
