@@ -1,4 +1,4 @@
-Certain nonprinting characters, as well as the backslash (\) and the apostrophe ( I ), can be expressed in terms
+/* Certain nonprinting characters, as well as the backslash (\) and the apostrophe ( I ), can be expressed in terms
 of escape sequences. An escape sequence always begins with a backward slash and is followed by one or
 more special characters.
 
@@ -18,3 +18,4 @@ apostrophe (')       \'					039
 question mark (?) 	 \? 				063
 backslash (\)		 \\ 				092
 null 				 \O 				000
+*/
