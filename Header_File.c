@@ -60,9 +60,9 @@ Syntax:
 
 Here is the table that displays some of the header files in C language,
 
-Header Files 					 Description
-------------					 -----------
-stdio.h     					 Input/Output functions
+Header Files 						 Description
+------------						 -----------
+stdio.h     						 Input/Output functions
 
 conio.h							 Console Input/Output functions
 
