@@ -91,7 +91,7 @@ For decimal numbers:
 	printf(" %.5f\n", b);
 	printf(" %.10f\n", b);
 	printf(" %10f\n", b);
-	printf(" %10.5f\n", b);//10 ghor mot..r precision hobey 5 ghor..
+	printf(" %10.5f\n", b);//10 ghor mot..r precision hobey 5 ghor..precision enough na thakley 0 diye fill korbey...
 	printf(" %10.5f\n", 1111111.2);
 	printf(" %010.5f\n", b);
 	printf(" %-10.5f\n", b);
@@ -104,11 +104,11 @@ For floating point
  158.21675
  158.2167510986
  158.216751
-  158.21675
+  158.21675//precision =5 ..sum of char =9..tai shamne ekta space
  1111111.20000
  0158.21675
  158.21675
- $158.22
+ $158.22//precision fill kortei hobe.tai ager shobgula niye nitey hoy..$15558.23432 thakley output=$15558.23
   158.22%
 
 	
@@ -171,15 +171,22 @@ For exponential
 
 
 	int i = 10;
-	printf("%d %d\n", i, i++);//printf always right side theke count korey..
-	printf("%d\n", (5, i));
+	printf("%d %d\n", i, i++);//printf always right side theke count korey..//11 10
 
+	printf("%d\n", (5, i));//11
+          
 // printf("%Takla");
 
-	printf("%-s\n", "Nahid");
+	printf("%-s\n", "Nahid");//Nahid
 	char s[]="Myname is Muntasir mamun Nahid";
         printf("%-7.5s\n",s);//Mynam'space''space' 
         printf("%7.5s\n",s);//' '' 'Mynam
+	or
+	 printf("%-7.9s\n",s);//Myname' 'is
+        printf("%7.8s\n",s);//Mybame' 'i
+	
+	//means dot er por je koy ghor shey koy ghor print korbey.if(dot er agey >dot er porey) tahole dot er porer ghor poriman character likhe bakita space diye fill korbey.
+	
 //sprintf()
 // If successful,
 // it returns the total number of
@@ -195,8 +202,8 @@ For exponential
 	puts(Name);//nothing
 
 
-	printf("%d\n", 5.5);
-	printf("%d\n", (int)5.5);
+	printf("%d\n", 5.5);//0
+	printf("%d\n", (int)5.5);//5.5
 
 ##-------------------------------------------------------------------##
 	printf("%05d\n", -5);
@@ -205,12 +212,12 @@ For exponential
 	float x = 12.0, y = -3.3;
 	printf(":%6d %7.0f %lO.1 e:\n\n", j, x, y);
 	printf (":%-6d %-7.0f %-lO.1e  \n\n", 1, x , y) ;
-	printf(":%+6d %+7.0f %+lO.le \n\n", 1, x, y);
+	printf(":%+6d %+7.0f %+lO.le \n\n", 1, x, y);//sign ta ki shetay bole dey..
 	printf(":%-+6d %-+7.0f %-+lO.le:\n\n", 1, x, y);//sign ta ki shetay bole dey..
 	printf(":%7.0f %#7.0f %7g %#7g:", x, x, y, y);
 
 output:
-	-0005
+-0005//5 digit including minus sign
    -5
 :   123      12 O.1 e:
 
