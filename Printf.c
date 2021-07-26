@@ -77,6 +77,14 @@ int main()
 	printf(" %10d\n", a);
 	printf(" %010d\n", a);
 	printf(" %-10d\n", a);
+	
+output:
+For decimal numbers:
+ 155
+        155
+ 0000000155
+ 155
+	
 
 	printf("\nFor floating point\n");
 	printf(" %f\n", b);
@@ -89,13 +97,39 @@ int main()
 	printf(" %-10.5f\n", b);
 	printf(" $%4.2f\n",b);
 	printf(" %7.2f%%\n",b);//it will print percent sign too
+	
+output:
+For floating point
+ 158.216751
+ 158.21675
+ 158.2167510986
+ 158.216751
+  158.21675
+ 1111111.20000
+ 0158.21675
+ 158.21675
+ $158.22
+  158.22%
 
+	
+	
+	
 	printf("\nFor octal\n");
 	printf(" %o\n", a);
 	printf(" %#o\n", a); //#=base//base of octal is 0
 	printf(" %10o\n", a);
 	printf(" %010o\n", a);
 	printf(" %-10o\n", a);
+	
+output:
+	
+For octal
+ 233
+ 0233
+        233
+ 0000000233
+ 233
+
 
 	printf("\nFor hexadecimal\n");
 	printf(" %x\n", a);
@@ -105,6 +139,16 @@ int main()
 	printf(" %010x\n", a);
 	printf(" %-10x\n", a);
 
+output:
+For hexadecimal
+ 9b
+ 0x9b
+ 9B
+         9b
+ 000000009b
+ 9b
+	
+	
 	printf("\nFor exponential\n");
 	printf(" %e\n", b);
 	printf(" %E\n", b);
@@ -113,6 +157,16 @@ int main()
 	printf(" %20.5e\n", b);
 	printf(" %020.5e\n", b);
 	printf(" %-20.5e\n", b);
+
+output:
+For exponential
+ 1.582168e+002
+ 1.582168E+002
+ 1.58217e+002
+ 1.5821675110e+002
+         1.58217e+002
+ 000000001.58217e+002
+ 1.58217e+002
 
 
 
@@ -144,7 +198,7 @@ int main()
 	printf("%d\n", 5.5);
 	printf("%d\n", (int)5.5);
 
-
+##-------------------------------------------------------------------##
 	printf("%05d\n", -5);
 	printf("%5d\n", -5);
 	int j = 123;
@@ -155,8 +209,20 @@ int main()
 	printf(":%-+6d %-+7.0f %-+lO.le:\n\n", 1, x, y);//sign ta ki shetay bole dey..
 	printf(":%7.0f %#7.0f %7g %#7g:", x, x, y, y);
 
-	
+output:
+	-0005
+   -5
+:   123      12 O.1 e:
 
+:1      12      O.1e
+
+:    +1     +12 O.le
+
+:+1     +12     O.le:
+
+:     12     12.    -3.3 -3.30000:
+	
+##---------------------------------------------------------------------------##
 	printf("%d",printf("%c %c %c ",'x','y','z'));//x y z 6 //right side theke ashe..%d ashar agey koyta char achey oita output %d tey..
 
 
