@@ -14,18 +14,25 @@ We can define operators as symbols that help us to perform specific mathematical
 
 5)Other Operators (conditional, comma, sizeof, address, redirection)
 
-1) Arithmetic Operators: These are the operators used to perform arithmetic/mathematical operations on operands. Examples: (+, -, *, /, %,++,–). Arithmetic operator are of two types:
+1) Arithmetic Operators: These are the operators used to perform arithmetic/mathematical operations on operands. Examples: (+, -, *, /, %,++,–).
+Arithmetic operator are of two types:
       Unary Operators: Operators that operates or works with a single operand are unary operators. For example: (++ ,--)
 
       Binary Operators: Operators that operates or works with two operands are binary operators. For example: (+ , – , * , /)
 
-2)Relational Operators: These are used for comparison of the values of two operands. For example, checking if one operand is equal to the other operand or not, an operand is greater than the other operand or not etc. Some of the relational operators are (==, >= , <= ).
+2)Relational Operators: These are used for comparison of the values of two operands. For example, checking if one operand is equal to the other operand or not, 
+an operand is greater than the other operand or not etc. Some of the relational operators are (==, >= , <= ).
 
-3)Logical Operators:  Logical Operators are used to combine two or more conditions/constraints or to complement the evaluation of the original condition in consideration. The result of the operation of a logical operator is a boolean value either true or false. For example, the logical AND represented as ‘&&’ operator in C or C++ returns true when both the conditions under consideration are satisfied. Otherwise it returns false. Therfore, a && b returns true when both a and b are true (i.e. non-zero)
+3)Logical Operators:  Logical Operators are used to combine two or more conditions/constraints or to complement the evaluation of the original condition in consideration.
+The result of the operation of a logical operator is a boolean value either true or false. For example, the logical AND represented as ‘&&’ operator in C or C++ returns true when both the conditions under consideration are satisfied. Otherwise it returns false. Therfore, a && b returns true when both a and b are true (i.e. non-zero)
 
-4)Bitwise Operators: The Bitwise operators is used to perform bit-level operations on the operands. The operators are first converted to bit-level and then the calculation is performed on the operands. The mathematical operations such as addition, subtraction, multiplication etc. can be performed at bit-level for faster processing. For example, the bitwise AND represented as & operator in C or C++ takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1.
+4)Bitwise Operators: The Bitwise operators is used to perform bit-level operations on the operands. The operators are first converted to bit-level and then the calculation is
+performed on the operands. The mathematical operations such as addition, subtraction, multiplication etc. can be performed at bit-level for faster processing. 
+For example, the bitwise AND represented as & operator in C or C++ takes two numbers as operands and does AND on every bit of two numbers.
+The result of AND is 1 only if both bits are 1.
 
-5)Assignment Operators: Assignment operators are used to assign value to a variable. The left side operand of the assignment operator is a variable and right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of variable on the left side otherwise the compiler will raise an error.
+5)Assignment Operators: Assignment operators are used to assign value to a variable. The left side operand of the assignment operator is a variable and right side 
+operand of the assignment operator is a value. The value on the right side must be of the same data-type of variable on the left side otherwise the compiler will raise an error.
 Example: +=,-=,*=,/=,
 
 ## Conditional operator:
