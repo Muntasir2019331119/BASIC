@@ -77,25 +77,59 @@ int main()
 	printf(" %10d\n", a);
 	printf(" %010d\n", a);
 	printf(" %-10d\n", a);
+	
+output:
+For decimal numbers:
+ 155
+        155
+ 0000000155
+ 155
+	
 
 	printf("\nFor floating point\n");
 	printf(" %f\n", b);
 	printf(" %.5f\n", b);
 	printf(" %.10f\n", b);
 	printf(" %10f\n", b);
-	printf(" %10.5f\n", b);//10 ghor mot..r precision hobey 5 ghor..
+	printf(" %10.5f\n", b);//10 ghor mot..r precision hobey 5 ghor..precision enough na thakley 0 diye fill korbey...
 	printf(" %10.5f\n", 1111111.2);
 	printf(" %010.5f\n", b);
 	printf(" %-10.5f\n", b);
 	printf(" $%4.2f\n",b);
 	printf(" %7.2f%%\n",b);//it will print percent sign too
+	
+output:
+For floating point
+ 158.216751
+ 158.21675
+ 158.2167510986
+ 158.216751
+  158.21675//precision =5 ..sum of char =9..tai shamne ekta space
+ 1111111.20000
+ 0158.21675
+ 158.21675
+ $158.22//precision fill kortei hobe.tai ager shobgula niye nitey hoy..$15558.23432 thakley output=$15558.23
+  158.22%
 
+	
+	
+	
 	printf("\nFor octal\n");
 	printf(" %o\n", a);
 	printf(" %#o\n", a); //#=base//base of octal is 0
 	printf(" %10o\n", a);
 	printf(" %010o\n", a);
 	printf(" %-10o\n", a);
+	
+output:
+	
+For octal
+ 233
+ 0233
+        233
+ 0000000233
+ 233
+
 
 	printf("\nFor hexadecimal\n");
 	printf(" %x\n", a);
@@ -105,6 +139,16 @@ int main()
 	printf(" %010x\n", a);
 	printf(" %-10x\n", a);
 
+output:
+For hexadecimal
+ 9b
+ 0x9b
+ 9B
+         9b
+ 000000009b
+ 9b
+	
+	
 	printf("\nFor exponential\n");
 	printf(" %e\n", b);
 	printf(" %E\n", b);
@@ -114,18 +158,35 @@ int main()
 	printf(" %020.5e\n", b);
 	printf(" %-20.5e\n", b);
 
+output:
+For exponential
+ 1.582168e+002
+ 1.582168E+002
+ 1.58217e+002
+ 1.5821675110e+002
+         1.58217e+002
+ 000000001.58217e+002
+ 1.58217e+002
+
 
 
 	int i = 10;
-	printf("%d %d\n", i, i++);//printf always right side theke count korey..
-	printf("%d\n", (5, i));
+	printf("%d %d\n", i, i++);//printf always right side theke count korey..//11 10
 
+	printf("%d\n", (5, i));//11
+          
 // printf("%Takla");
 
-	printf("%-s\n", "Nahid");
+	printf("%-s\n", "Nahid");//Nahid
 	char s[]="Myname is Muntasir mamun Nahid";
         printf("%-7.5s\n",s);//Mynam'space''space' 
         printf("%7.5s\n",s);//' '' 'Mynam
+	or
+	 printf("%-7.9s\n",s);//Myname' 'is
+        printf("%7.8s\n",s);//Mybame' 'i
+	
+	//means dot er por je koy ghor shey koy ghor print korbey.if(dot er agey >dot er porey) tahole dot er porer ghor poriman character likhe bakita space diye fill korbey.
+	
 //sprintf()
 // If successful,
 // it returns the total number of
@@ -141,22 +202,34 @@ int main()
 	puts(Name);//nothing
 
 
-	printf("%d\n", 5.5);
-	printf("%d\n", (int)5.5);
+	printf("%d\n", 5.5);//0
+	printf("%d\n", (int)5.5);//5.5
 
-
+##-------------------------------------------------------------------##
 	printf("%05d\n", -5);
 	printf("%5d\n", -5);
 	int j = 123;
 	float x = 12.0, y = -3.3;
 	printf(":%6d %7.0f %lO.1 e:\n\n", j, x, y);
 	printf (":%-6d %-7.0f %-lO.1e  \n\n", 1, x , y) ;
-	printf(":%+6d %+7.0f %+lO.le \n\n", 1, x, y);
+	printf(":%+6d %+7.0f %+lO.le \n\n", 1, x, y);//sign ta ki shetay bole dey..
 	printf(":%-+6d %-+7.0f %-+lO.le:\n\n", 1, x, y);//sign ta ki shetay bole dey..
 	printf(":%7.0f %#7.0f %7g %#7g:", x, x, y, y);
 
-	
+output:
+-0005//5 digit including minus sign
+   -5
+:   123      12 O.1 e:
 
+:1      12      O.1e
+
+:    +1     +12 O.le
+
+:+1     +12     O.le:
+
+:     12     12.    -3.3 -3.30000:
+	
+##---------------------------------------------------------------------------##
 	printf("%d",printf("%c %c %c ",'x','y','z'));//x y z 6 //right side theke ashe..%d ashar agey koyta char achey oita output %d tey..
 
 
