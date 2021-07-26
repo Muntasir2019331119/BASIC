@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-
-    // Switch statement in C tests the value of a variable and compares it with multiple cases. Once the case match is found, a block of statements associated with that particular case is executed.
+// Switch statement in C tests the value of a variable and compares it with multiple cases. Once the case match is found, 
+ //a block of statements associated with that particular case is executed.
 
 // switch( expression )
 // {
