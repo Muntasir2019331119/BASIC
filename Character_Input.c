@@ -85,7 +85,8 @@ Output: Program terminates immediately.
 
 
 ##------------------------getche()------------------------------##
-Like getch(), this is also a non-standard function present in conio.h. It reads a single character from the keyboard and displays immediately on output screen without waiting for enter key.
+Like getch(), this is also a non-standard function present in conio.h. It reads a single character from the keyboard and displays immediately on output screen without waiting 
+for enter key.
 
 Syntax:
 
