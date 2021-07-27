@@ -1,4 +1,3 @@
-//credit: MAHIR LABIB DIHAN AND INTERNET https://github.com/mahirlabibdihan
 // Types:
 
 // Storage Class        KeyWord         Default Value       Storage         Scope               Life
