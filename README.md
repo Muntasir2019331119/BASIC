@@ -1,3 +1,3 @@
 **Some Basic of C language.** 
 
-**Many things I've learned and added from my Dearest Friend ***MAHIR LABIB DIHAN*** .Click [here](https://github.com/mahirlabibdihan) to visit his github profile.** 
+**Credit: [***MAHIR LABIB DIHAN***](https://github.com/mahirlabibdihan) , GeekForGeeks , Internet and Experiment** 
