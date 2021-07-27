@@ -1,4 +1,4 @@
-//credit:MAHIR LABIB DIHAN https://github.com/mahirlabibdihan
+
 #include <stdio.h>
  
 // Commandline Argument : Arguments passed to program  using commandline(Ex: CMD) during program execution . 
@@ -50,3 +50,12 @@ int main(int n,char *arg[])
 	}
 	return 0;
 }
+//##---------------------------------------------------------------------##
+//command line argument:
+
+
+int main(int argc,char *argv[])//argc->argument counter..argv[]->argument values
+//The value of the argc argument is the number of command line arguments. The argv argument is a vector of C strings; its elements are the individual command line argument strings. The file name of the program being run is also included in the vector as the first element; the value of argc counts this element
+argv[0]->contains the name of the running programme.
+aragv[1]->contains the string passed to the programme as the first element
+aragv[n]->contains the string passed to the programme as the nth element

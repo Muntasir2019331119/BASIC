@@ -1,9 +1,27 @@
 #include<stdio.h> 
 #include<stdlib.h>
+// Functions are the building blocks of C and the place where all program activity occurs.
 
-// return-type function-name (parameter declarations) {
-// definitions and statements
+
+//// A function argument is an expression that is used within the parentheses of a function call. 
+//A function parameter is an object declared within the parentheses of a function declaration or definition. 
+
+// return-type function-name (parameters list) {
+// definitions and statements//body of the function
 // }
+
+
+
+// int Function(int a,int b)
+// {
+		// return a+b;
+// }
+
+// int Function(a,b)int a;int b;
+// {
+		// return a+b;
+// }
+
 
 
 //Standard Library Function - Built in functions in c programming which are defined in header files. Only the prototypes are there in the header files. Not the source code.
@@ -12,7 +30,10 @@
 
 
 //Function name is a pointer
+// Default return type of a function is int .
+// A function may return any type of data except an array.(in c language)//see bottom part
 
+// An empty parameter list can be explicitly specified as such by placing the keyword void inside the parentheses.
 
 //Global Variables can be accessed and changed from any function
 //Local Variables can be accessed and changed from the same function only.Variable declared within a function can only be used by that function.
@@ -23,6 +44,14 @@
 //main() Function cannot be called from another funtion [Infinity Loop]
 
 
+// Type Conversions of Arguments :
+// Arguments that are arrays or functions are converted to pointers before being passed as function arguments.
+// Arguments passed to non prototyped(variadic function) C functions undergo conversions: type  char parameters are converted to int, 
+//and float parameters to double. These are called default argument promotions
+
+
+
+//##---------------------Call by Reference---------------------------------##
 //Call by refference - Passing the address of a variable --- [ Array always call by refference ] 
 void CallRef(int *b)
 {
@@ -38,7 +67,7 @@ void Callr()
 	CallRef(b);
 }
 
-
+//##--------------------------Call By value-------------------------------##
 
 //Call by value - Passing the value of a variable
 void CallVal(int b)
@@ -54,7 +83,7 @@ void Callv()
 	CallVal(a);
 }
 
-
+//##------------------------------------------------------------------------##
 
 
 //Function and variable name can be same unless you use both in the same function
@@ -91,7 +120,7 @@ int* StaticAddress()
 // }//Incorrect
 
 
-void Print2D(int n,int m,int x[][m])  // Works in C compiler not in C++
+void Print2D(int n,int m,int x[][m])  // Works in C compiler not in C++//must have to give column 
 {
 	int i,j;
 	for(i=0;i<n;i++)
@@ -151,6 +180,7 @@ void Function(int a,int b); //Function prototype or declaration // int a,int b a
 
 void FunctionPointer(void (*Function)(int,int)) //Function Pointer as Parameter
 {
+
 }
 
 
@@ -248,7 +278,8 @@ void printArray(int t[3][3]);
 void printArray(int t[][3]);
 //which means we must have to send column number
 //but sending row number is not compulsory..
-example:
+//example:
+
 void printArray(int t[][3])
 {
 	for(int i=0;i<3;i++)
@@ -277,7 +308,8 @@ void printarrptr(int **t) {
         printf("\n");
     }
 }
-int main(void) {
+int main(void)
+{
     int *arrptr[3];
     int i,j;
 
@@ -292,19 +324,78 @@ int main(void) {
     return 0;
 }
 
+//##------------------------Function Returning Array---------------------##
 
-//command line argument:
+//wrong Way->sometimes gives garbage value
+// #include <stdio.h>
+
+// int* fun()
+// {
+// 	int arr[100];
+
+// 	/* Some operations on arr[] */
+// 	arr[0] = 10;
+// 	arr[1] = 20;
+
+// 	return arr;
+// }
+
+// int main()
+// {
+// 	int* ptr = fun();
+// 	printf("%d %d", ptr[0], ptr[1]);
+// 	return 0;
+// }
 
 
-int main(int argc,char *argv[])//argc->argument counter..argv[]->argument values
-//The value of the argc argument is the number of command line arguments. The argv argument is a vector of C strings; its elements are the individual command line argument strings. The file name of the program being run is also included in the vector as the first element; the value of argc counts this element
-argv[0]->contains the name of the running programme.
-aragv[1]->contains the string passed to the programme as the first element
-aragv[n]->contains the string passed to the programme as the nth element
+
+//Right way:
+
+// 1)Using Dynamically Allocated Array : 
+#include <stdio.h>
+
+int* fun(int *arr)
+{
+	/* Some operations on arr[] */
+	arr[0] = 10;
+	arr[1] = 20;
+
+	return arr;
+}
+
+int main()
+{
+	int arr[100];
+	int* ptr = fun(arr);
+	printf("%d %d", ptr[0], ptr[1]);
+	return 0;
+}
+
+
+//2)Using static array:
+#include <stdio.h>
+
+int* fun()
+{
+	static int arr[100];
+
+	/* Some operations on arr[] */
+	arr[0] = 10;
+	arr[1] = 20;
+
+	return arr;
+}
+
+int main()
+{
+	int* ptr = fun();
+	printf("%d %d", ptr[0], ptr[1]);
+	return 0;
+}
 
 
 
-//variadic function:
+//##---------------------variadic function:-------------------------------------##
 
 // //the below function will give proper output..
 
@@ -361,5 +452,5 @@ int main()
 }
 
 //these type of function is known as variadic function..to know more visit gfg or  click [here]{https://github.com/MuntasirNahid/BASIC_in_C_Language/blob/main/variadic_function.c}
-
+//##---------------------------------------------------------------------------##
 
