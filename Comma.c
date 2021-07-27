@@ -1,6 +1,7 @@
 /*
 1) Comma as an operator: 
-The comma operator (represented by the token, ) is a binary operator that evaluates its first operand and discards the result, it then evaluates the second operand and returns this value (and type). The comma operator has the lowest precedence of any C operator, and acts as a sequence point. 
+The comma operator (represented by the token, ) is a binary operator that evaluates its first operand and discards the result, it then evaluates the second operand
+and returns this value (and type). The comma operator has the lowest precedence of any C operator, and acts as a sequence point. 
  
 //2nd value ta assigned hoye thakey..
 int i = (5, 10); // 10 is assigned to i
