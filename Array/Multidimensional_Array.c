@@ -41,7 +41,8 @@ We can declare a two dimensional integer array say ‘x’ of size 10,20 as:
 int x[10][20];
 Elements in two-dimensional arrays are commonly referred by x[i][j] where i is the row number and ‘j’ is the column number.
 
-A two – dimensional array can be seen as a table with ‘x’ rows and ‘y’ columns where the row number ranges from 0 to (x-1) and column number ranges from 0 to (y-1). A two – dimensional array ‘x’ with 3 rows and 3 columns is shown below:
+A two – dimensional array can be seen as a table with ‘x’ rows and ‘y’ columns where the row number ranges from 0 to (x-1) and column number ranges from 0 to (y-1). 
+A two – dimensional array ‘x’ with 3 rows and 3 columns is shown below:
 two-d
 
 
@@ -49,12 +50,14 @@ two-d
 First Method:
 
 int x[3][4] = {0, 1 ,2 ,3 ,4 , 5 , 6 , 7 , 8 , 9 , 10 , 11}
-The above array have 3 rows and 4 columns. The elements in the braces from left to right are stored in the table also from left to right. The elements will be filled in the array in the order, first 4 elements from the left in first row, next 4 elements in second row and so on.
+The above array have 3 rows and 4 columns. The elements in the braces from left to right are stored in the table also from left to right.
+The elements will be filled in the array in the order, first 4 elements from the left in first row, next 4 elements in second row and so on.
 
 Better Method:
 
 int x[3][4] = {{0,1,2,3}, {4,5,6,7}, {8,9,10,11}};
-This type of initialization make use of nested braces. Each set of inner braces represents one row. In the above example there are total three rows so there are three sets of inner braces.
+This type of initialization make use of nested braces. Each set of inner braces represents one row. In the above example there are total 
+three rows so there are three sets of inner braces.
 
 Accessing Elements of Two-Dimensional Arrays: Elements in Two-Dimensional arrays are accessed using the row indexes and column indexes.
 
@@ -123,7 +126,8 @@ int x[2][3][4] =
    { {12,13,14,15}, {16,17,18,19}, {20,21,22,23} }
  };
  
-Accessing elements in Three-Dimensional Arrays: Accessing elements in Three-Dimensional Arrays is also similar to that of Two-Dimensional Arrays. The difference is we have to use three loops instead of two loops for one additional dimension in Three-dimensional Arrays.
+Accessing elements in Three-Dimensional Arrays: Accessing elements in Three-Dimensional Arrays is also similar to that of Two-Dimensional Arrays. 
+The difference is we have to use three loops instead of two loops for one additional dimension in Three-dimensional Arrays.
 
 
 // C++ program to print elements of Three-Dimensional
