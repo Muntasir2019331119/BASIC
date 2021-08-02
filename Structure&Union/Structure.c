@@ -8,7 +8,7 @@
 // structure follows scope rules
 // structure elements can't be initialized in c
 
-/*############################################################### T Y P E     O F     S T R U C T U R E      D E C L A R A T I O N S ##########################################*/
+/*################################################## T Y P E     O F     S T R U C T U R E      D E C L A R A T I O N S ##################################*/
 	
 	struct SN1; //forward declaration
 	// 1 .  Declaring a structure whose name is SN1
