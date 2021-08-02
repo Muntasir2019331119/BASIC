@@ -42,7 +42,7 @@
 //       {
 // 	      int x=0;
 // 	      int y=0;
-//       };//incorrect..we cannot initialize structure member in declaration
+//       };//incorrect..we cannot initialize structure member in declaration (In C language).But in C++ we can initialize .
 
 
 	typedef struct SN1 SA1; // Making a alias for SN1 structure as SA1 .  We can use struct SN1 or SA1 to declare new struct variables further .
@@ -161,7 +161,7 @@
 
 /*################################ Array pass by value using Structure ##################################*/
 
-	int i;
+       int i;
 	struct Array
 	{
 		int x[5];
@@ -206,7 +206,10 @@ int main()
 /*#######################################################################################################*/
 
 
-
+// struct arr
+// {
+//  static int a,b;	
+// };//this will give an error in c..because c structures cannot have static keyword .But C++ will accept it
 
 
 
@@ -375,6 +378,7 @@ In C language, Structures provide a method for packing together data of differen
 However, C structures have some limitations.
 
 The C structure does not allow the struct data type to be treated like built-in data types:
+
 We cannot use operators like +,- etc. on Structure variables. For example, consider the following code:
 
 struct number
