@@ -8,7 +8,7 @@
 // structure follows scope rules
 // structure elements can't be initialized in c
 
-/*############################################################### T Y P E     O F     S T R U C T U R E      D E C L A R A T I O N S ################################################################*/
+/*############################################################### T Y P E     O F     S T R U C T U R E      D E C L A R A T I O N S ##########################################*/
 	
 	struct SN1; //forward declaration
 	// 1 .  Declaring a structure whose name is SN1
@@ -55,8 +55,7 @@
 	  int x;
 	}SA4;
 
-/*###################################################################################################################################################################################################*/
-
+/*#####################################################################################################################################################################*/
 
 //padding er kahini from gfg..link given below.
 
@@ -247,11 +246,17 @@ struct BitField{
 
 
 
-// Flexible Array Member
+// ---------------------------------------------Flexible Array Member(FAM)--------------------------------------------------------##
+
+/*For the structures in C programming language from C99 standard onwards, we can declare an array without a dimension and whose size is flexible in nature.
+Such an array inside the structure should preferably be declared as the last member of structure and its size is variable(can be changed be at runtime).
+The structure must contain at least one more named member in addition to the flexible array member.*/
+
+
 struct Flex
 {
 	int Roll;
-	char Name[];   // flexible array member // need another variable in the structure to declare flexible array // It must be the last element within thr structure
+	char Name[];   // flexible array member // need another variable in the structure to declare flexible array // It must be the last element within the structure
 };
 
 struct Flex* Create(struct Flex *s,int Roll,char Name[])
