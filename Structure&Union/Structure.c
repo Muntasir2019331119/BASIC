@@ -225,6 +225,36 @@ void AssignStructure()
 
 
 
+struct Day {
+	int Good;
+	int Bad;
+};
+
+struct Day Today = {
+	.Good=10,
+	.Bad=30
+};
+
+
+
+void Swap(struct Day *a, struct Day *b)
+{
+	struct Day temp=*a;
+	*a=*b;
+	*b=temp;
+}
+
+
+void Initialize()
+{
+	struct Day a={10,20};
+	struct Day b={.Bad=20};
+	struct Day c=a;
+}
+
+
+
+
 struct
 {
 	char Name[20];
@@ -243,6 +273,8 @@ struct
 struct BitField{
 	unsigned a:4;   // size of a is 1 Bit
 }Bit;
+
+
 
 
 
