@@ -397,28 +397,16 @@ prog.c:10:7: error:
 invalid operands to binary + (have 'struct number' and 'struct number')
 n3=n1+n2;
 
-*/
 
 
-struct number
-{
-	float x;
-};
-int main()
-{
-	struct number n1,n2,n3;
-	n1.x=4;
-	n2.x=3;
-	n3=n1+n2;
-	return 0;
-}
 
-/*Output:
+No Data Hiding: C Structures do not permit data hiding. Structure members can be accessed by any function, anywhere in the scope of the Structure.
 
-prog.c: In function 'main':
-prog.c:10:7: error:
-invalid operands to binary + (have 'struct number' and 'struct number')
-n3=n1+n2;
+Functions inside Structure: C structures do not permit functions inside Structure.But C++ permits.
 
-*/
+Static Members: C Structures cannot have static members inside their body
+
+Access Modifiers: C Programming language do not support access modifiers. So they cannot be used in C Structures.
+
+Construction creation in Structure: Structures in C cannot have constructor inside Structures.
 
