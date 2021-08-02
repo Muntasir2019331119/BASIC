@@ -38,6 +38,12 @@
 	  int x;
 	}SV3;
 
+//       struct point 
+//       {
+// 	      int x=0;
+// 	      int y=0;
+//       };//incorrect..we cannot initialize structure member in declaration
+
 
 	typedef struct SN1 SA1; // Making a alias for SN1 structure as SA1 .  We can use struct SN1 or SA1 to declare new struct variables further .
 
@@ -178,6 +184,24 @@
 		printf("After Change(Main Array) : ");
 		for(i=0;i<5;i++) printf("%d ",Arr.x[i]);puts("");
 	}
+
+struct Point
+{
+   int x, y;
+};
+  
+int main()
+{
+   // Create an array of structures
+   struct Point arr[10];
+  
+   // Access array members
+   arr[0].x = 10;
+   arr[0].y = 20;
+  
+   printf("%d %d", arr[0].x, arr[0].y);
+
+}
 
 /*#######################################################################################################*/
 
@@ -327,6 +351,7 @@ int main()
 	printf("%u",Student);
 }
 
+
 //&Student.Name[0] , &Student ,Student--> 4202560
 
 //Student --> 4294953984
@@ -342,3 +367,58 @@ int main()
 // RGB Green={0,255,0};
 // RGB Blue={0,0,255};
 // RGB Yellow={255,255,0};
+
+
+##--------------------------------------Limitations of C Structures--------------------------------------------------------##
+/*
+In C language, Structures provide a method for packing together data of different types. A Structure is a helpful tool to handle a group of logically related data items. 
+However, C structures have some limitations.
+
+The C structure does not allow the struct data type to be treated like built-in data types:
+We cannot use operators like +,- etc. on Structure variables. For example, consider the following code:
+
+struct number
+{
+	float x;
+};
+int main()
+{
+	struct number n1,n2,n3;
+	n1.x=4;
+	n2.x=3;
+	n3=n1+n2;
+	return 0;
+}
+
+/*Output:
+
+prog.c: In function 'main':
+prog.c:10:7: error:
+invalid operands to binary + (have 'struct number' and 'struct number')
+n3=n1+n2;
+
+*/
+
+
+struct number
+{
+	float x;
+};
+int main()
+{
+	struct number n1,n2,n3;
+	n1.x=4;
+	n2.x=3;
+	n3=n1+n2;
+	return 0;
+}
+
+/*Output:
+
+prog.c: In function 'main':
+prog.c:10:7: error:
+invalid operands to binary + (have 'struct number' and 'struct number')
+n3=n1+n2;
+
+*/
+
