@@ -292,13 +292,13 @@ int main()
 
 
 
-*/
+
 
 int *p; /* p i s a pointer t o an integer  q u a n t i t y */
 
 i n t *p[lO]; /* p i s a 10-element array of pointers t o integer q u a n t i t i e s */
 
-i n t (*p) [ 101; /* p i s a pointer t o a 10-element i n t e g e r a r r a y */
+i n t (*p) [ 10]; /* p i s a pointer t o a 10-element i n t e g e r a r r a y */
 
  i n t *p (void) ; /* p i s a function that
 returns a pointer t o an i n t e g e r q u a n t i t y */
@@ -372,4 +372,3 @@ character, and
 returns a pointer t o an i n t e g e r q u a n t i t y */            
 
 
-*/
