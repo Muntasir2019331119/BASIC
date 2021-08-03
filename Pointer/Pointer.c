@@ -78,7 +78,8 @@ int main()
     A++; ++A;
     A = A + 1;
 
-    // If we add a 1 to Pointer . The address of that pointer will increase by the sizeof variable it is pointing to . If we add n to Ptr , it will become Ptr+n*sizeof(*Ptr) .
+    // If we add a 1 to Pointer . The address of that pointer will increase by the sizeof variable it is pointing to . If we add n to Ptr ,
+    //it will become Ptr+n*sizeof(*Ptr) .
 
     /* Above expression is equivalent to - */ A = (void*)A + sizeof(*A) * 1;
 
