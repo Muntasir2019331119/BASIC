@@ -8,7 +8,7 @@
 // structure follows scope rules
 // structure elements can't be initialized in c
 
-/*############################################################### T Y P E     O F     S T R U C T U R E      D E C L A R A T I O N S ################################################################*/
+/*################################################## T Y P E     O F     S T R U C T U R E      D E C L A R A T I O N S ##################################*/
 	
 	struct SN1; //forward declaration
 	// 1 .  Declaring a structure whose name is SN1
@@ -38,6 +38,12 @@
 	  int x;
 	}SV3;
 
+//       struct point 
+//       {
+// 	      int x=0;
+// 	      int y=0;
+//       };//incorrect..we cannot initialize structure member in declaration (In C language).But in C++ we can initialize .
+
 
 	typedef struct SN1 SA1; // Making a alias for SN1 structure as SA1 .  We can use struct SN1 or SA1 to declare new struct variables further .
 
@@ -55,8 +61,7 @@
 	  int x;
 	}SA4;
 
-/*###################################################################################################################################################################################################*/
-
+/*#####################################################################################################################################################################*/
 
 //padding er kahini from gfg..link given below.
 
@@ -156,7 +161,7 @@
 
 /*################################ Array pass by value using Structure ##################################*/
 
-	int i;
+       int i;
 	struct Array
 	{
 		int x[5];
@@ -180,10 +185,31 @@
 		for(i=0;i<5;i++) printf("%d ",Arr.x[i]);puts("");
 	}
 
+struct Point
+{
+   int x, y;
+};
+  
+int main()
+{
+   // Create an array of structures
+   struct Point arr[10];
+  
+   // Access array members
+   arr[0].x = 10;
+   arr[0].y = 20;
+  
+   printf("%d %d", arr[0].x, arr[0].y);
+
+}
+
 /*#######################################################################################################*/
 
 
-
+// struct arr
+// {
+//  static int a,b;	
+// };//this will give an error in c..because c structures cannot have static keyword .But C++ will accept it
 
 
 
@@ -226,6 +252,36 @@ void AssignStructure()
 
 
 
+struct Day {
+	int Good;
+	int Bad;
+};
+
+struct Day Today = {
+	.Good=10,
+	.Bad=30
+};
+
+
+
+void Swap(struct Day *a, struct Day *b)
+{
+	struct Day temp=*a;
+	*a=*b;
+	*b=temp;
+}
+
+
+void Initialize()
+{
+	struct Day a={10,20};
+	struct Day b={.Bad=20};
+	struct Day c=a;
+}
+
+
+
+
 struct
 {
 	char Name[20];
@@ -247,11 +303,19 @@ struct BitField{
 
 
 
-// Flexible Array Member
+
+
+// ---------------------------------------------Flexible Array Member(FAM)--------------------------------------------------------##
+
+/*For the structures in C programming language from C99 standard onwards, we can declare an array without a dimension and whose size is flexible in nature.
+Such an array inside the structure should preferably be declared as the last member of structure and its size is variable(can be changed be at runtime).
+The structure must contain at least one more named member in addition to the flexible array member.*/
+
+
 struct Flex
 {
 	int Roll;
-	char Name[];   // flexible array member // need another variable in the structure to declare flexible array // It must be the last element within thr structure
+	char Name[];   // flexible array member // need another variable in the structure to declare flexible array // It must be the last element within the structure
 };
 
 struct Flex* Create(struct Flex *s,int Roll,char Name[])
@@ -290,6 +354,7 @@ int main()
 	printf("%u",Student);
 }
 
+
 //&Student.Name[0] , &Student ,Student--> 4202560
 
 //Student --> 4294953984
@@ -305,3 +370,47 @@ int main()
 // RGB Green={0,255,0};
 // RGB Blue={0,0,255};
 // RGB Yellow={255,255,0};
+
+
+##--------------------------------------Limitations of C Structures--------------------------------------------------------##
+/*
+In C language, Structures provide a method for packing together data of different types. A Structure is a helpful tool to handle a group of logically related data items. 
+However, C structures have some limitations.
+
+The C structure does not allow the struct data type to be treated like built-in data types:
+
+We cannot use operators like +,- etc. on Structure variables. For example, consider the following code:
+
+struct number
+{
+	float x;
+};
+int main()
+{
+	struct number n1,n2,n3;
+	n1.x=4;
+	n2.x=3;
+	n3=n1+n2;
+	return 0;
+}
+
+/*Output:
+
+prog.c: In function 'main':
+prog.c:10:7: error:
+invalid operands to binary + (have 'struct number' and 'struct number')
+n3=n1+n2;
+
+
+
+
+No Data Hiding: C Structures do not permit data hiding. Structure members can be accessed by any function, anywhere in the scope of the Structure.
+
+Functions inside Structure: C structures do not permit functions inside Structure.But C++ permits.
+
+Static Members: C Structures cannot have static members inside their body
+
+Access Modifiers: C Programming language do not support access modifiers. So they cannot be used in C Structures.
+
+Construction creation in Structure: Structures in C cannot have constructor inside Structures.
+
