@@ -1,5 +1,12 @@
 typedef: The typedef is used to give data type a new name. For example,
 
+// typedef int age;
+// In this declaration age is a user-defined data type, which is equivalent to type i n t . Hence, the variable declaration
+
+// age male, female;
+// is equivalent to writing
+// i n t male, female;
+
 
 // C program to demonstrate typedef
 #include <stdio.h>
