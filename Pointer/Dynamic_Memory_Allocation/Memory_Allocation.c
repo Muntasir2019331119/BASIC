@@ -10,7 +10,9 @@ C provides some functions to achieve these tasks. There are 4 library functions 
 
 
 ##-----------------------------------Malloc()---------------------------##
-The “malloc” or “memory allocation” method in C is used to dynamically allocate a single large block of memory with the specified size. It returns a pointer of type void which can be cast into a pointer of any form. It doesn’t Iniatialize memory at execution time so that it has initializes each block with the default garbage value initially.
+The “malloc” or “memory allocation” method in C is used to dynamically allocate a single large block of memory with the specified size. 
+It returns a pointer of type void which can be cast into a pointer of any form. It doesn’t Iniatialize memory at execution time so that it has initializes each block
+with the default garbage value initially.
 
 Syntax:
  ptr=(cast_type*)malloc(byte_size);
@@ -65,7 +67,8 @@ int main()
 
 ##------------------------------------------calloc()-----------------------------------------------##
 
-“calloc” or “contiguous allocation” method in C is used to dynamically allocate the specified number of blocks of memory of the specified type. it is very much similar to malloc() but has two different points and these are:
+“calloc” or “contiguous allocation” method in C is used to dynamically allocate the specified number of blocks of memory of the specified type. 
+it is very much similar to malloc() but has two different points and these are:
 1)It initializes each block with a default value ‘0’.
 2)It has two parameters or arguments as compare to malloc().
 
@@ -95,7 +98,8 @@ free(array);
 
 
 ##-----------------------------------------------free()---------------------------------------------##
-“free” method in C is used to dynamically de-allocate the memory. The memory allocated using functions malloc() and calloc() is not de-allocated on their own. Hence the free() method is used, whenever the dynamic memory allocation takes place. It helps to reduce wastage of memory by freeing it.
+“free” method in C is used to dynamically de-allocate the memory. The memory allocated using functions malloc() and calloc() is not de-allocated on their own.
+Hence the free() method is used, whenever the dynamic memory allocation takes place. It helps to reduce wastage of memory by freeing it.
 
 Syntax:
 
@@ -107,7 +111,9 @@ free(ptr);
 
 
 ##------------------------------------------realloc()---------------------------------------------------##
-“realloc” or “re-allocation” method in C is used to dynamically change the memory allocation of a previously allocated memory. In other words, if the memory previously allocated with the help of malloc or calloc is insufficient, realloc can be used to dynamically re-allocate memory. re-allocation of memory maintains the already present value and new blocks will be initialized with the default garbage value.
+“realloc” or “re-allocation” method in C is used to dynamically change the memory allocation of a previously allocated memory. 
+In other words, if the memory previously allocated with the help of malloc or calloc is insufficient, realloc can be used to dynamically re-allocate memory.
+re-allocation of memory maintains the already present value and new blocks will be initialized with the default garbage value.
 
  syntax:
  ptr=realloc(ptr,new_size);
