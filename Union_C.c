@@ -46,3 +46,36 @@ int main()
 	printf("var3=%d %d %d\n",Var3.a,Var3.b,Var3.c);
 	// Variables of same data type will hold the same value . 
 }
+
+
+//##---------------------Pointers to Union-----------------##
+
+// Pointer operation in union are just like structures..
+
+union test
+{
+	int x,y;
+};
+
+int main()
+{
+	union test p1;
+	p1.x=10;
+	union test *p2=&p1;
+	printf("%d %d",p2->x,p2->y);
+
+}
+
+
+
+
+//##---------------------------Similarities between Structure and Union--------------------------##
+
+
+
+
+1)Both are user-defined data types used to store data of different types as a single unit.
+2)Their members can be objects of any type, including other structures and unions or arrays. A member can also consist of a bit field.
+3)Both structures and unions support only assignment = and sizeof operators. The two structures or unions in the assignment must have the same members and member types.
+4)A structure or a union can be passed by value to functions and returned by value by functions. The argument must have the same type as the function parameter. A structure or union is passed by value just like a scalar variable as a corresponding parameter.
+5)‘.’ operator is used for accessing members. 
