@@ -89,6 +89,7 @@ void ReverseBit(unsigned n)
     }
     PrintBit(n);
 }
+//#---------------------------------Swap without temp-------------------------------------------##
 void swap2(int *a,int *b)
 {
     // *a=*a^*b;
@@ -100,10 +101,13 @@ void swap2(int *a,int *b)
     // *a^=*b;
     *a^=*b^=*a^=*b;
 }
+//#------------------------------------------------------------------------##
+
 int main()
 {
     int n,m;
-//basic info:
+//-----------------------------------------------basic info:---------------------------------------------------//
+    
     /*if (n&1)puts("Odd\n");if(n%2)puts("Odd\n")
 
       //2^n check:
@@ -120,7 +124,7 @@ int main()
        // x&(2^n-1)=x%(2^n);
 
 
-
+//---------------------------------------------------------------------------------------------//
 
 
 
@@ -161,9 +165,13 @@ int main()
     printf("5>>1=%d\n",a>>1);
     printf("9>>1=%d\n",b>>1);
     printf("1<<30=%d\n",1<<30);
+ 
+    //#-------------------------------------------WARNING------------------------------------------------------------##
+    
 //1<<31 dile negative ashbe..karon tokhn sign bit change hoye jay...
     /*
-    1)The left shift and right shift operators should not be used for negative numbers. The result of is undefined behaviour if any of the operands is a negative number. For example results of both -1 << 1 and 1 << -1 is undefined.
+    1)The left shift and right shift operators should not be used for negative numbers. The result of is undefined behaviour if any of the operands is a negative number.
+    For example results of both -1 << 1 and 1 << -1 is undefined.
 
     2)If the number is shifted more than the size of integer, the behaviour is undefined. For example, 1 << 33 is undefined if integers are stored using 32 bits.
      For bit shift of larger values 1ULL<<62  ULL is used for Unsigned Long Long which is defined using 64 bits which can store large values.
@@ -172,6 +180,9 @@ int main()
      division of first term and second term raised to power 2 (1>>3 = 1/pow(2,3)) respectively.
     As mentioned in point 1, it works only if numbers are positive.
     */
+    
+    
+    
 //pow function can be used in bit pattern:like
     int i = 3;
     printf("pow(2, %d) = %d\n", i, 1 << i);
