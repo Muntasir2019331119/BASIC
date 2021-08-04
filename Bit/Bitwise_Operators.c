@@ -53,10 +53,16 @@ b>>1 = 4
 
 
 ##----------------------Interesting Fact---------------------------------##
-1)The left shift and right shift operators should not be used for negative numbers. If the second operand(which decides the number of shifts) is a negative number, it results in undefined behaviour in C. For example results of both 1 <<- 1 and 1 >> -1 is undefined. Also, if the number is shifted more than the size of the integer, the behaviour is undefined. For example, 1 << 33 is undefined if integers are stored using 32 bits. Another thing is, NO shift operation is performed if additive-expression(operand that decides no of shits) is 0. 
+1)The left shift and right shift operators should not be used for negative numbers. If the second operand(which decides the number of shifts) is a negative number, 
+it results in undefined behaviour in C. For example results of both 1 <<- 1 and 1 >> -1 is undefined. 
+Also, if the number is shifted more than the size of the integer, the behaviour is undefined. 
+For example, 1 << 33 is undefined if integers are stored using 32 bits. Another thing is,
+NO shift operation is performed if additive-expression(operand that decides no of shits) is 0. 
 Note: In C++, this behavior is well-defined.
 
-2)The bitwise XOR operator is the most useful operator from a technical interview perspective. It is used in many problems. A simple example could be “Given a set of numbers where all elements occur even a number of times except one number, find the odd occurring number” This problem can be efficiently solved by just doing XOR of all numbers. 
+2)The bitwise XOR operator is the most useful operator from a technical interview perspective. It is used in many problems.
+A simple example could be “Given a set of numbers where all elements occur even a number of times except one number, find the odd occurring number”
+This problem can be efficiently solved by just doing XOR of all numbers. 
  
 
 #include <stdio.h>
@@ -80,6 +86,7 @@ int main(void)
            findOdd(arr, n));
     return 0;
 }
+
 
 3)The left-shift and right-shift operators are equivalent to multiplication and division by 2 respectively. As mentioned in point 1, it works only if numbers are positive. 
  
@@ -125,7 +132,8 @@ Right shift operator shifts all bits towards right by certain number of specifie
 212>>8 = 00000000 
 212>>0 = 11010100 (No Shift)
 Left Shift Operator
-Left shift operator shifts all bits towards left by a certain number of specified bits. The bit positions that have been vacated by the left shift operator are filled with 0. The symbol of the left shift operator is <<.
+Left shift operator shifts all bits towards left by a certain number of specified bits. The bit positions that have been vacated by the left shift operator are filled with 0.
+The symbol of the left shift operator is <<.
 
 212 = 11010100 (In binary)
 212<<1 = 110101000 (In binary) [Left shift by one bit]
