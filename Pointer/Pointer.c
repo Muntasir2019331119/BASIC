@@ -113,46 +113,9 @@ int main()
     int *P = (int*) &Q; //without (int*)it will show a error but it will still give output
     *P = 8;
     printf("%u\n", Q);
-    /******************************************************************/
+ 
 
-
-
-
-    /*******************************************************************************************************************/
-
-    //### p is a pointer to a 3 element array of pointers to functions returning a pointer to int
-
-    // Dividing into sub problems
-
-    // p is a pointer to a
-    // 3 element array of pointers to
-    // functions returning
-    // a pointer to
-    // int
-
-
-    // Bottom Up approach
-
-    int Var;   // Integer
-
-    int *p3 ;  // A pointer to integer
-    p3 = &Var;  // Check
-
-
-    int* (*p2)();   // Pointer to a function returning a pointer to int
-    p2 = Func;    // Check
-
-
-    int* (*p1[3])();   // 3 element array of pointers to functions returning a pointer to int
-    p1[0] = p2;    // Check
-
-
-    // int (*Arr)[3];   // Pointer to an array .
-
-
-    int*(*(*p)[3])();    // p is a pointer to a 3 element array of pointers to functions returning a pointer to int
-    p = &p1;   // Check
-
+  
     /********************************************************************************************************************/
 }
 
@@ -240,6 +203,15 @@ int main()
 
 
 
+// Suppose x is a two-dimensional integer array having 10 rows and 20 columns. We can declare x as
+// int (*x)[20];
+// rather than
+// int x[10][20];
+// In the first declaration, x is defined to be a pointer to a group of contiguous, one-dimensional, 20-element integer arrays.
+// Thus, x points to the first 20-element array, which is actually the first row (i.e., row 0) of the original two-dimensional
+// array. Similarly, ( x + 1) points to the second 20-element array, which is the second row (row 1) of the original twodimensional
+// array,
+
 //##------------------------------Poimter & Function-------------------------------------##
 
 //passing address to functions:
@@ -278,3 +250,125 @@ int main()
     return 0;
 }
 //##------------------------------------------------------------------------------##
+  /*******************************************************************************************************************/
+
+    //### p is a pointer to a 3 element array of pointers to functions returning a pointer to int
+
+    // Dividing into sub problems
+
+    // p is a pointer to a
+    // 3 element array of pointers to
+    // functions returning
+    // a pointer to
+    // int
+
+
+    // Bottom Up approach
+
+    int Var;   // Integer
+
+    int *p3 ;  // A pointer to integer
+    p3 = &Var;  // Check
+
+
+    int* (*p2)();   // Pointer to a function returning a pointer to int
+    p2 = Func;    // Check
+
+
+    int* (*p1[3])();   // 3 element array of pointers to functions returning a pointer to int
+    p1[0] = p2;    // Check
+
+
+    // int (*Arr)[3];   // Pointer to an array .
+
+
+    int*(*(*p)[3])();    // p is a pointer to a 3 element array of pointers to functions returning a pointer to int
+    p = &p1;   // Check
+
+
+
+
+
+
+
+
+
+
+int *p; /* p i s a pointer t o an integer  q u a n t i t y */
+
+i n t *p[lO]; /* p i s a 10-element array of pointers t o integer q u a n t i t i e s */
+
+i n t (*p) [ 10]; /* p i s a pointer t o a 10-element i n t e g e r a r r a y */
+
+ i n t *p (void) ; /* p i s a function that
+returns a pointer t o an i n t e g e r q u a n t i t y */
+            
+
+i n t p(char *a); /* p i s a function t h a t
+accepts an argument which i s a pointer t o a character and
+returns an i n t e g e r q u a n t i t y */
+            
+i n t *p(char a*); /* p i s a function t h a t
+accepts an argument which i s a pointer t o a character
+returns a pointer t o an i n t e g e r q u a n t i t y */
+            
+i n t (*p)(char *a); /* p i s a pointer t o a function t h a t
+accepts an argument which is a pointer t o a character
+returns an i n t e g e r q u a n t i t y */
+            
+i n t (*p(char * a ) ) [ l O ] ; /* p i s a function t h a t
+accepts an argument which i s a pointer t o a character
+returns a pointer t o a 10-element i n t e g e r a r r a y */
+            
+i n t p(char ( * a ) [ ] ) ; /* p i s a function t h a t
+accepts an argument which i s a pointer t o a character array
+returns an i n t e g e r q u a n t i t y */
+            
+i n t p(char * a [ ] ) ; /* p i s a function t h a t
+accepts an argument which i s an array of pointers t o
+characters
+returns an i n t e g e r q u a n t i t y */
+            
+i n t *p(char a [ ] ) ; /* p i s a function t h a t
+accepts an argument which i s a character array
+returns a pointer t o an i n t e g e r q u a n t i t y */
+            
+i n t *p(char ( * a ) [ ] ) ; /* p i s a function t h a t
+accepts an argument which i s a pointer t o a character array
+returns a pointer t o an i n t e g e r q u a n t i t y */
+            
+i n t *p(char * a [ ] ) ; /* p i s a function t h a t accepts an argument which i s an array of pointers t o
+characters
+returns a pointer t o an i n t e g e r q u a n t i t y */
+            
+            
+i n t (*p)(char ( * a ) [ ] ) ; /* p i s a pointer t o a function t h a t
+accepts an argument which i s a pointer t o a character array
+returns an i n t e g e r q u a n t i t y */
+            
+i n t *(*p)(char ( * a ) [ ] ) ; /* p i s pointer t o a function t h a t
+accepts an argument which i s a pointer t o a character array
+returns a pointer t o an integer q u a n t i t y */
+            
+i n t *(*p)(char * a [ ] ) ; /* p i s a pointer t o a function t h a t
+accepts an argument which i s an array of pointers t o
+characters
+returns a pointer t o an i n t e g e r q u a n t i t y */
+            
+i n t ( * p [ l O ] ) ( v o i d ) ; /* p i s a 10-element array of pointers t o functions;
+each function returns an i n t e g e r q u a n t i t y */
+            
+i n t (*p[lO])(char a); /* p i s a 10-element array of pointers t o functions;
+each function accepts an argument which i s a character, and
+returns an i n t e g e r q u a n t i t y */
+            
+i n t * ( * p [ l O ] ) ( c h a r a); /* p i s a 10-element array of pointers t o functions;
+each function accepts an argument which i s a character, and
+returns a pointer t o an i n t e g e r q u a n t i t y */
+            
+i n t * ( * p [ l O ] ) ( c h a r *a); /* p is a 10-element array of pointers t o functions;
+each function accepts an argument which i s a pointer t o a
+character, and
+returns a pointer t o an i n t e g e r q u a n t i t y */            
+
+
