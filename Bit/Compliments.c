@@ -13,7 +13,9 @@ Bitwise complement Operation of 35
   ________
   11011100  = 220 (In decimal)
 
- // The result of ~ operator on a small number can be a big number if the result is stored in an unsigned variable. And the result may be a negative number if the result is stored in a signed variable (assuming that the negative numbers are stored in 2’s complement form where the leftmost bit is the sign bit) 
+ // The result of ~ operator on a small number can be a big number if the result is stored in an unsigned variable.
+ And the result may be a negative number if the result is stored in a signed variable (assuming that the negative numbers are stored in 2’s complement form
+ where the leftmost bit is the sign bit) 
  
  Example:
 
