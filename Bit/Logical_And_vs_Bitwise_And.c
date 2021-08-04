@@ -11,7 +11,8 @@ int main()
 	// sizeof the return is always 4 .
 
 	// Bitwise And -> & -> Its a binary operator . 
-	// The left and right operands are integral types (char and short promotes to int). It does And operation between left and right operands and returns the result . Return type is also integral .
+	// The left and right operands are integral types (char and short promotes to int). It does And operation between left and right operands and returns the result .
+	Return type is also integral .
 	// sizeof the return is same as sizeof the largest between the left and right operand . If it is smaller than integer , then the size will be size of integer(4) .   
 
 
@@ -19,7 +20,9 @@ int main()
 	// But not always same when the right and left operands are integers. --> (3&&2) is equal to (3&2) , but (1&2) is not equal to (1&&2) .
 	// & can't have float/double operands . && can .
 
-// The bitwise operators should not be used in place of logical operators. The result of logical operators (&&, || and !) is either 0 or 1, but bitwise operators return an integer value. Also, the logical operators consider any non-zero operand as 1. For example, consider the following program, the results of & and && are different for same operands. 
+// The bitwise operators should not be used in place of logical operators. The result of logical operators (&&, || and !) is either 0 or 1, 
+// 		but bitwise operators return an integer value. Also, the logical operators consider any non-zero operand as 1.
+// 		For example, consider the following program, the results of & and && are different for same operands. 
  
 
 #include <stdio.h>
@@ -116,5 +119,6 @@ False True
 
 }
 
-// Boolean Expression : A boolean expression is an expression that has relational and/or logical operators operating on boolean variables. A boolean expression evaluates to either true or false.
+// Boolean Expression : A boolean expression is an expression that has relational and/or logical operators operating on boolean variables.
+//A boolean expression evaluates to either true or false.
 // Boolean Data type : A boolean is a data type in the C Standard Library which can store true or false. Every non-zero value corresponds to true while 0 corresponds to false.
