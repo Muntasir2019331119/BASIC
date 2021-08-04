@@ -1,4 +1,39 @@
 #include<stdio.h>
+
+// A bit-field must be a member of a structure or union.
+
+// Bitfield  :  Allocate memory to variables as our wish .
+
+
+// type_name variable_name: width;
+// Type of bitfield can't be floating type.
+// Width of bitfield cannot exceed its type . width<=sizeof(type)
+struct BitField1{
+	unsigned a:4;   // size of a is 4 Bit
+}Bit1;
+
+
+// Variable name is optional . But we cannot access the field without name
+// type_name : width;
+struct BitField2{
+	int:1;
+	signed a:4;   // size of a is 4 Bit
+}Bit2;
+
+// sizeof() can't be applied to bitfields
+// We can't take input to bitfields from user . But We can assign to bitfields .
+// Can not take address of Bit-Field
+
+
+// It is valid to mix normal structure members with bit-fields.
+
+
+// Bit-fields cannot be arrayed.
+
+
+
+//
+
 //normal representation:
 /*struct BirthDate{
  unsigned int d,m,y;
@@ -39,8 +74,17 @@ int i;
 	for(i=0;i<8;i++)
 	{
 		x.a=x.b=x.c=i;
-		printf("%d %d %d\n",x.a,x.b,x.c);//when i=2..tokhn a er jponno output ashbey 0..karon a holo 1 bit er..(2=01)tai 0 ashbe..bakigular khetrew same..
+		printf("%d %d %d\n",x.a,x.b,x.c);//when i=2..tokhn a er joonno output ashbey 0..karon a holo 1 bit er..(2=10)tai 0 ashbe..bakigular khetrew same..
 	}
+// output:
+// 0 0 0
+// 1 1 1
+// 0 2 2
+// 1 3 3
+// 0 0 4
+// 1 1 5
+// 0 2 6
+// 1 3 7
 	puts("-----");
 	for(i=0;i<8;i++)
 	{
@@ -48,4 +92,14 @@ int i;
 		//assignment right theke left e hoy..tai i=5 jokhn x.a=1 x.a=x.b=x.c=1 hoye jay tokhn...
 		printf("%d %d %d\n",x.a,x.b,x.c);
 	}
+// output:
+// 0 0 0
+// 1 1 1
+// 0 0 0
+// 1 1 1
+// 0 0 0
+// 1 1 1
+// 0 0 0
+// 1 1 1
+
 }
