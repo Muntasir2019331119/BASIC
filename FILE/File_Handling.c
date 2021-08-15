@@ -1,6 +1,7 @@
 /*
 ##---------------------------------------BASIC--------------------------------------------##
-So far the operations using C program are done on a prompt / terminal which is not stored anywhere. But in the software industry, most of the programs are written to store the information fetched from the program. One such way is to store the fetched information in a file. Different operations that can be performed on a file are: 
+So far the operations using C program are done on a prompt / terminal which is not stored anywhere. But in the software industry, most of the programs are written to store 
+the information fetched from the program. One such way is to store the fetched information in a file. Different operations that can be performed on a file are: 
  
 
 Creation of a new file (fopen with attributes as “a” or “a+” or “w” or “w++”)
@@ -17,18 +18,22 @@ For opening a file, fopen function is used with the required access modes. Some 
 File opening modes in C: 
  
 
-“r” – Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer which points to the first character in it. If the file cannot be opened fopen( ) returns NULL.
+“r” – Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer which points to the first character in it.
+If the file cannot be opened fopen( ) returns NULL.
+
 “rb” – Open for reading in binary mode. If the file does not exist, fopen( ) returns NULL.
 
 “w” – Searches file. If the file exists, its contents are overwritten. If the file doesn’t exist, a new file is created. Returns NULL, if unable to open file.
 
 “wb” – Open for writing in binary mode. If the file exists, its contents are overwritten. If the file does not exist, it will be created.
 
-“a” – Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer that points to the last character in it. If the file doesn’t exist, a new file is created. Returns NULL, if unable to open file.
+“a” – Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer that points to the last character in it. 
+If the file doesn’t exist, a new file is created. Returns NULL, if unable to open file.
 
 “ab” – Open for append in binary mode. Data is added to the end of the file. If the file does not exist, it will be created.
 
-“r+” – Searches file. If is opened successfully fopen( ) loads it into memory and sets up a pointer which points to the first character in it. Returns NULL, if unable to open the file.
+“r+” – Searches file. If is opened successfully fopen( ) loads it into memory and sets up a pointer which points to the first character in it.
+Returns NULL, if unable to open the file.
 
 “rb+” – Open for both reading and writing in binary mode. If the file does not exist, fopen( ) returns NULL.
 
@@ -36,11 +41,15 @@ File opening modes in C:
 
 “wb+” – Open for both reading and writing in binary mode. If the file exists, its contents are overwritten. If the file does not exist, it will be created.
 
-“a+” – Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer which points to the last character in it. If the file doesn’t exist, a new file is created. Returns NULL, if unable to open file.
+“a+” – Searches file. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer which points to the last character in it.
+If the file doesn’t exist, a new file is created. Returns NULL, if unable to open file.
 
 “ab+” – Open for both reading and appending in binary mode. If the file does not exist, it will be created.
 
-As given above, if you want to perform operations on a binary file, then you have to append ‘b’ at the last. For example, instead of “w”, you have to use “wb”, instead of “a+” you have to use “a+b”. For performing the operations on the file, a special pointer called File pointer is used which is declared as 
+As given above, if you want to perform operations on a binary file, then you have to append ‘b’ at the last. For example, instead of “w”, you have to use “wb”,
+instead of “a+” you have to use “a+b”.
+
+For performing the operations on the file, a special pointer called File pointer is used which is declared as 
  
 
 FILE *filePointer; 
@@ -57,7 +66,9 @@ The second parameter can be changed to contain all the attributes listed in the 
 
 ##------------------------------Reading from a file--------------------------------------------##
 
-The file read operations can be performed using functions fscanf or fgets. Both the functions performed the same operations as that of scanf and gets but with an additional parameter, the file pointer. So, it depends on you if you want to read the file line by line or character by character.
+The file read operations can be performed using functions fscanf or fgets. Both the functions performed the same operations as that of scanf and gets
+but with an additional parameter, the file pointer. So, it depends on you if you want to read the file line by line or character by character.
+
 And the code snippet for reading a file is as: 
 
 FILE *filePointer;
@@ -127,7 +138,8 @@ fclose(filePointer)
 
 "w" = Open a new file for writing only. If a file with the specified file-namecurrently exists, it will be destroyed and a new file created in its place.
 
-"a" = Open an existing file for appending (i.e., for adding new information at the end of the file). A new file will be created if the file with the specified file-namedoes not exist.
+"a" = Open an existing file for appending (i.e., for adding new information at the end of the file).
+A new file will be created if the file with the specified file-namedoes not exist.
 
 "r+" Open an existing file for both reading and writing.
 
