@@ -1,12 +1,18 @@
 #include <stdio.h>
 // 		  			  Logical Operator		   			 Bitwise Operator
 // 		  			  ----------------		   			 ----------------
-// And  -        		   A&&B	                      		   A&B
-// Or   -        		   A||B                       		   A|B
-// Not  -         			!A                        		   ~A
-// Nand -                !(A&&B)
-// Nor  -                !(A||B)  
+// And  -        			   A&&B	                      				   A&B
+
+// Or   -        			   A||B                       		 		  A|B
+
+// Not  -         			   !A                        				   ~A
+
+// Nand -            		         !(A&&B)
+
+// Nor  -               		 !(A||B)  
+
 // Xor  -     								        		   A^B
+
 // XNor  -
 
 #define max(a,b) (a>b?a:b)

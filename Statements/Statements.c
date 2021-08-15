@@ -1,5 +1,6 @@
 /*
-A statement is a command given to the computer that instructs the computer to take a specific action, such as display to the screen, or collect input. A computer program is made up of a series of statements.
+A statement is a command given to the computer that instructs the computer to take a specific action, such as display to the screen, or collect input. 
+A computer program is made up of a series of statements.
 
 
 Contents:
@@ -26,7 +27,8 @@ A compound statement is the way C groups multiple statements into a single state
 ##-------------------
 
 Expression Statements:
-An expression statement consists of an optional expression followed by a semicolon (;). If the expression is present, the statement may have a value. If no expression is present, the statement is often called the null statement.
+An expression statement consists of an optional expression followed by a semicolon (;). If the expression is present, the statement may have a value. 
+If no expression is present, the statement is often called the null statement.
 ##----------------
 
 Selection Statements
@@ -49,13 +51,15 @@ C has three kinds of iteration statements. The first is a while-statement with t
 
 while ( expression ) statement
 
-The substatement of a while runs repeatedly as long as the control expression evaluates to non-zero at the beginning of each iteration. If the control expression evaluates to zero the first time through, the substatement may not run at all.
+The substatement of a while runs repeatedly as long as the control expression evaluates to non-zero at the beginning of each iteration.
+If the control expression evaluates to zero the first time through, the substatement may not run at all.
 
 The second is a do-while statement of the form
 
 do statement while ( expression ) ;
 
-This is similar to a while loop, except that the controlling expression is evaluated at the end of the loop instead of the beginning and consequently the sub-statement must execute at least once.
+This is similar to a while loop, except that the controlling expression is evaluated at the end of the loop instead of the beginning 
+and consequently the sub-statement must execute at least once.
 
 The third type of iteration statement is the for-statement. 
 
@@ -81,12 +85,14 @@ The third, the continue statement, with the form
 
 continue ;
 
-is used within the substatement of iteration statements to transfer control flow to the place just before the end of the substatement. In for statements the iteration expression  will then be executed before the controlling expression is evaluated.
+is used within the substatement of iteration statements to transfer control flow to the place just before the end of the substatement. 
+In for statements the iteration expression  will then be executed before the controlling expression is evaluated.
 
 The fourth type of jump statement is the return statement with the form
 
 return expression ;
 
-This statement returns from the function. If the function return type is void, the function may not return a value; otherwise, the expression represents the value to be returned.
+This statement returns from the function. If the function return type is void, the function may not return a value; otherwise, 
+the expression represents the value to be returned.
 ##---------------------------
 */
