@@ -2,8 +2,8 @@
 Some applications involve the use of data files to store blocks of data, where each block consists of a fixed number of contiguous bytes. Each block will generally represent
 a complex data structure, such as a structure or an array.
 For example, a data file may consist of multiple structures having the same composition, or it may contain multiple arrays of the same type and size. 
-For such applications it may be desirable to read the entire block from the data file, or write the entire block to the data file, rather than reading or writing the individual
-components (i.e., structure members or array elements) within each block separately.
+For such applications it may be desirable to read the entire block from the data file, or write the entire block to the data file, rather than reading or writing the 
+individual components (i.e., structure members or array elements) within each block separately.
 The library functions fread and fwrite are intended to be used in situations of this type. These functions are often referred to as unformatted read and write functions.
 Similarly, data files of this type are often referred to as unformatted data files.
 Each of these functions requires four arguments: a pointer to the data block, the size of the data block, the number of data blocks being transferred, and the stream pointer.
